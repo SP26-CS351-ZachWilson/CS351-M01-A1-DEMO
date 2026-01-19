@@ -1,38 +1,141 @@
+/* OCU Colors: #003366 (dark blue) and #0066cc (light blue) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+  min-height: 100vh;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Header Styling */
+.App-header {
+  background-color: #003366;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.App-header h1 {
   color: white;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main Content Container */
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Section Styling */
+section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #0066cc;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #0066cc;
+  padding-left: 0.75rem;
+}
+
+p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  color: #003366;
+}
+
+/* Interests List Styling */
+.interests ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.interests li {
+  background-color: #f0f8ff;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-left: 4px solid #0066cc;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.interests li:hover {
+  transform: translateX(10px);
+  background-color: #d6ebff;
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skills-list p {
+  font-size: 1.2rem;
+  color: #003366;
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact p {
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    margin: 1rem;
+    padding: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
